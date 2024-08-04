@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: skillifymepayment
+  data:
+    mongodb:
+      uri: mongodb+srv://developersouvik02:XuslpqBEKNFWaH5Z@skillify.tzsm6tm.mongodb.net/?retryWrites=true&w=majority&appName=Skillify
+      database: SkillifyMe
+      auto-index-creation: true
+      username: developersouvik02
+      password: XuslpqBEKNFWaH5Z
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+paypal:
+  client-id: ATipJ7XjXJqAbg_c2FOuJI864yDMRS8EwzctF2sbjztUf2uVKUDJHjCDAkv5DDHRl2Eh1duWoZQDK6C1
+  client-secret: EPO0swhvFIE1C0lM4vSCtDoj3yBAK0MkDIdcOlEokWmAbIr5k2A4ygd8C3bYTm5Mbm9UhvufvTMshRTz
+  mode: sandbox
+  success:
+    url: http://localhost:8082/api/payments/payment-success
+  cancel:
+    url: http://localhost:8082/api/payments/cancel
